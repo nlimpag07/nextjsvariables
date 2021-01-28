@@ -1,0 +1,1073 @@
+.container {
+  padding: 4rem 1rem;
+  font-family: Apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #000000;
+}
+
+.container p {
+  margin: 1.5rem 0;
+}
+
+.container pre {
+  border: 1px solid #eaeaea;
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  white-space: pre;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.card {
+  max-width: 50rem;
+  box-shadow: -10px 10px 80px rgba(0, 0, 0, 0.12);
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.inlineCode {
+  color: #be00ff;
+  font-size: 16px;
+  white-space: preWrap;
+}
+
+.inlineCode::before,
+.inlineCode::after {
+  content: "`";
+}
+
+.hr {
+  border: 0;
+  border-top: 1px solid #eaeaea;
+  margin: 1.5rem 0;
+}
+
+.table {
+  display: block;
+  overflow: auto;
+  border-collapse: collapse;
+  margin: 2.5rem 0;
+}
+
+.table th {
+  font-weight: 600;
+  padding: 0.75rem 0.875rem;
+  border: 1px solid #eaeaea;
+}
+
+.table td {
+  font-size: 0.875rem;
+  padding: 0.75rem 0.875rem;
+  border: 1px solid #eaeaea;
+}
+.container figure {
+  width: 260px;
+  height: 260px;
+}
+.img_circle_0 {
+  background-image: url(./public/images/circle_0.png);
+  animation: circleRotate 4s linear infinite;
+}
+.img_circle_1 {
+  background-image: url(./public/images/circle_1.png);
+  animation: circleRotate 4s linear infinite;
+}
+@keyframes circleRotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.soundWaveWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.soundHolder {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 2560px;
+  height: 1596px;
+}
+.soundWaveWrap {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 231.15px;
+  width: calc(100% + 30px);
+  height: 600px;
+  transform: translate(-50%, 0) rotate(7deg);
+  transform-origin: center center;
+}
+.soundWaveWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+.soundWaveWrap > div {
+  box-flex: 0;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+  height: 100%;
+  position: relative;
+}
+.soundWave {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.soundWaveWrap .soundWave.gray {
+  transform: scaleY(0.8);
+}
+.soundWaveWrap .soundWave.green {
+  transform: scaleY(0.65);
+}
+.soundWaveWrap .soundWave.orange {
+  transform: scaleY(0.5);
+}
+
+.soundWaveWrap span {
+  width: 4px;
+  height: 100%;
+  display: block;
+  /*position: relative;*/
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform-origin: center center;
+  transition: transform 0.3s ease;
+  transform: translate(0, -50%) scaleY(1);
+}
+.soundWaveWrap .soundWave.orange {
+  transform: scaleY(0.5);
+}
+.soundWaveWrap .soundWave.green {
+  transform: scaleY(0.65);
+}
+.soundWaveWrap .soundWave.gray {
+  transform: scaleY(0.8);
+}
+.soundWaveWrap .soundWave.orange span {
+  background-color: #ff9e1b;
+}
+.soundWaveWrap .soundWave.gray span {
+  background-color: rgba(255, 255, 255, 0.15);
+  margin-left: 4px;
+}
+.soundWaveWrap .soundWave.green span {
+  background-color: rgba(124, 224, 211, 0.75);
+  margin-left: 1px;
+}
+
+@keyframes audiowave {
+  0% {
+    transform: translate(0, -50%) scaleY(0.1);
+    transform: translate(0, -50%) scaleY(0.1);
+  }
+  30% {
+    transform: translate(0, -50%) scaleY(0.1);
+    transform: translate(0, -50%) scaleY(0.1);
+  }
+  50% {
+    transform: translate(0, -50%) scaleY(1);
+    transform: translate(0, -50%) scaleY(1);
+  }
+  100% {
+    transform: translate(0, -50%) scaleY(0.2);
+    transform: translate(0, -50%) scaleY(0.2);
+  }
+}
+@keyframes audiowaveMove {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@keyframes audiowaveMove {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+.soundWaveWrap.animationActive .soundWave span:nth-child(1) {
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -0.046s linear infinite;
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -0.046s linear infinite;
+  height: 79%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(2) {
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -0.092s linear infinite;
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -0.092s linear infinite;
+  height: 87%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(3) {
+  animation: audiowave 0.85s -0.6s infinite,
+    audiowaveMove 4s -0.138s linear infinite;
+  animation: audiowave 0.85s -0.6s infinite,
+    audiowaveMove 4s -0.138s linear infinite;
+  height: 64%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(4) {
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -0.184s linear infinite;
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -0.184s linear infinite;
+  height: 69%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(5) {
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -0.23s linear infinite;
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -0.23s linear infinite;
+  height: 60%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(6) {
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -0.276s linear infinite;
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -0.276s linear infinite;
+  height: 92%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(7) {
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -0.322s linear infinite;
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -0.322s linear infinite;
+  height: 100%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(8) {
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -0.368s linear infinite;
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -0.368s linear infinite;
+  height: 76%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(9) {
+  animation: audiowave 0.85s -0.6s infinite,
+    audiowaveMove 4s -0.414s linear infinite;
+  animation: audiowave 0.85s -0.6s infinite,
+    audiowaveMove 4s -0.414s linear infinite;
+  height: 85%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(10) {
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -0.46s linear infinite;
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -0.46s linear infinite;
+  height: 52%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(11) {
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -0.506s linear infinite;
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -0.506s linear infinite;
+  height: 78%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(12) {
+  animation: audiowave 0.85s -0.6s infinite,
+    audiowaveMove 4s -0.552s linear infinite;
+  animation: audiowave 0.85s -0.6s infinite,
+    audiowaveMove 4s -0.552s linear infinite;
+  height: 91%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(13) {
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -0.598s linear infinite;
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -0.598s linear infinite;
+  height: 53%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(14) {
+  animation: audiowave 0.85s -0.6s infinite,
+    audiowaveMove 4s -0.644s linear infinite;
+  animation: audiowave 0.85s -0.6s infinite,
+    audiowaveMove 4s -0.644s linear infinite;
+  height: 70%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(15) {
+  animation: audiowave 0.85s -0.6s infinite,
+    audiowaveMove 4s -0.69s linear infinite;
+  animation: audiowave 0.85s -0.6s infinite,
+    audiowaveMove 4s -0.69s linear infinite;
+  height: 93%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(16) {
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -0.736s linear infinite;
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -0.736s linear infinite;
+  height: 87%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(17) {
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -0.782s linear infinite;
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -0.782s linear infinite;
+  height: 76%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(18) {
+  animation: audiowave 0.85s -0.6s infinite,
+    audiowaveMove 4s -0.828s linear infinite;
+  animation: audiowave 0.85s -0.6s infinite,
+    audiowaveMove 4s -0.828s linear infinite;
+  height: 76%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(19) {
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -0.874s linear infinite;
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -0.874s linear infinite;
+  height: 70%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(20) {
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -0.92s linear infinite;
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -0.92s linear infinite;
+  height: 79%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(21) {
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -0.966s linear infinite;
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -0.966s linear infinite;
+  height: 64%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(22) {
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -1.012s linear infinite;
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -1.012s linear infinite;
+  height: 56%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(23) {
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -1.058s linear infinite;
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -1.058s linear infinite;
+  height: 98%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(24) {
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -1.104s linear infinite;
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -1.104s linear infinite;
+  height: 75%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(25) {
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -1.15s linear infinite;
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -1.15s linear infinite;
+  height: 53%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(26) {
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -1.196s linear infinite;
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -1.196s linear infinite;
+  height: 100%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(27) {
+  animation: audiowave 0.85s -0.6s infinite,
+    audiowaveMove 4s -1.242s linear infinite;
+  animation: audiowave 0.85s -0.6s infinite,
+    audiowaveMove 4s -1.242s linear infinite;
+  height: 96%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(28) {
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -1.288s linear infinite;
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -1.288s linear infinite;
+  height: 68%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(29) {
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -1.334s linear infinite;
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -1.334s linear infinite;
+  height: 62%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(30) {
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -1.38s linear infinite;
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -1.38s linear infinite;
+  height: 94%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(31) {
+  animation: audiowave 0.85s -0.6s infinite,
+    audiowaveMove 4s -1.426s linear infinite;
+  animation: audiowave 0.85s -0.6s infinite,
+    audiowaveMove 4s -1.426s linear infinite;
+  height: 91%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(32) {
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -1.472s linear infinite;
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -1.472s linear infinite;
+  height: 99%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(33) {
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -1.518s linear infinite;
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -1.518s linear infinite;
+  height: 74%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(34) {
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -1.564s linear infinite;
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -1.564s linear infinite;
+  height: 79%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(35) {
+  animation: audiowave 0.85s -0.6s infinite,
+    audiowaveMove 4s -1.61s linear infinite;
+  animation: audiowave 0.85s -0.6s infinite,
+    audiowaveMove 4s -1.61s linear infinite;
+  height: 68%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(36) {
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -1.656s linear infinite;
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -1.656s linear infinite;
+  height: 90%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(37) {
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -1.702s linear infinite;
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -1.702s linear infinite;
+  height: 59%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(38) {
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -1.748s linear infinite;
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -1.748s linear infinite;
+  height: 54%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(39) {
+  animation: audiowave 0.85s -0.6s infinite,
+    audiowaveMove 4s -1.794s linear infinite;
+  animation: audiowave 0.85s -0.6s infinite,
+    audiowaveMove 4s -1.794s linear infinite;
+  height: 74%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(40) {
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -1.84s linear infinite;
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -1.84s linear infinite;
+  height: 74%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(41) {
+  animation: audiowave 0.85s -0.6s infinite,
+    audiowaveMove 4s -1.886s linear infinite;
+  animation: audiowave 0.85s -0.6s infinite,
+    audiowaveMove 4s -1.886s linear infinite;
+  height: 57%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(42) {
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -1.932s linear infinite;
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -1.932s linear infinite;
+  height: 91%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(43) {
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -1.978s linear infinite;
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -1.978s linear infinite;
+  height: 85%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(44) {
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -2.024s linear infinite;
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -2.024s linear infinite;
+  height: 87%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(45) {
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -2.07s linear infinite;
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -2.07s linear infinite;
+  height: 89%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(46) {
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -2.116s linear infinite;
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -2.116s linear infinite;
+  height: 72%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(47) {
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -2.162s linear infinite;
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -2.162s linear infinite;
+  height: 68%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(48) {
+  animation: audiowave 0.85s -0.6s infinite,
+    audiowaveMove 4s -2.208s linear infinite;
+  animation: audiowave 0.85s -0.6s infinite,
+    audiowaveMove 4s -2.208s linear infinite;
+  height: 76%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(49) {
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -2.254s linear infinite;
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -2.254s linear infinite;
+  height: 87%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(50) {
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -2.3s linear infinite;
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -2.3s linear infinite;
+  height: 95%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(51) {
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -2.346s linear infinite;
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -2.346s linear infinite;
+  height: 94%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(52) {
+  animation: audiowave 0.85s -0.6s infinite,
+    audiowaveMove 4s -2.392s linear infinite;
+  animation: audiowave 0.85s -0.6s infinite,
+    audiowaveMove 4s -2.392s linear infinite;
+  height: 79%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(53) {
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -2.438s linear infinite;
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -2.438s linear infinite;
+  height: 77%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(54) {
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -2.484s linear infinite;
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -2.484s linear infinite;
+  height: 85%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(55) {
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -2.53s linear infinite;
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -2.53s linear infinite;
+  height: 71%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(56) {
+  animation: audiowave 0.85s -0.6s infinite,
+    audiowaveMove 4s -2.576s linear infinite;
+  animation: audiowave 0.85s -0.6s infinite,
+    audiowaveMove 4s -2.576s linear infinite;
+  height: 81%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(57) {
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -2.622s linear infinite;
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -2.622s linear infinite;
+  height: 53%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(58) {
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -2.668s linear infinite;
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -2.668s linear infinite;
+  height: 57%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(59) {
+  animation: audiowave 0.85s -0.6s infinite,
+    audiowaveMove 4s -2.714s linear infinite;
+  animation: audiowave 0.85s -0.6s infinite,
+    audiowaveMove 4s -2.714s linear infinite;
+  height: 71%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(60) {
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -2.76s linear infinite;
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -2.76s linear infinite;
+  height: 63%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(61) {
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -2.806s linear infinite;
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -2.806s linear infinite;
+  height: 87%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(62) {
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -2.852s linear infinite;
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -2.852s linear infinite;
+  height: 69%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(63) {
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -2.898s linear infinite;
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -2.898s linear infinite;
+  height: 89%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(64) {
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -2.944s linear infinite;
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -2.944s linear infinite;
+  height: 77%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(65) {
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -2.99s linear infinite;
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -2.99s linear infinite;
+  height: 85%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(66) {
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -3.036s linear infinite;
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -3.036s linear infinite;
+  height: 94%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(67) {
+  animation: audiowave 0.85s -0.6s infinite,
+    audiowaveMove 4s -3.082s linear infinite;
+  animation: audiowave 0.85s -0.6s infinite,
+    audiowaveMove 4s -3.082s linear infinite;
+  height: 52%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(68) {
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -3.128s linear infinite;
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -3.128s linear infinite;
+  height: 61%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(69) {
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -3.174s linear infinite;
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -3.174s linear infinite;
+  height: 90%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(70) {
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -3.22s linear infinite;
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -3.22s linear infinite;
+  height: 64%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(71) {
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -3.266s linear infinite;
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -3.266s linear infinite;
+  height: 68%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(72) {
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -3.312s linear infinite;
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -3.312s linear infinite;
+  height: 58%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(73) {
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -3.358s linear infinite;
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -3.358s linear infinite;
+  height: 82%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(74) {
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -3.404s linear infinite;
+  animation: audiowave 0.85s -0.8s infinite,
+    audiowaveMove 4s -3.404s linear infinite;
+  height: 62%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(75) {
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -3.45s linear infinite;
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -3.45s linear infinite;
+  height: 85%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(76) {
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -3.496s linear infinite;
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -3.496s linear infinite;
+  height: 98%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(77) {
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -3.542s linear infinite;
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -3.542s linear infinite;
+  height: 98%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(78) {
+  animation: audiowave 0.85s -0.6s infinite,
+    audiowaveMove 4s -3.588s linear infinite;
+  animation: audiowave 0.85s -0.6s infinite,
+    audiowaveMove 4s -3.588s linear infinite;
+  height: 59%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(79) {
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -3.634s linear infinite;
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -3.634s linear infinite;
+  height: 99%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(80) {
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -3.68s linear infinite;
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -3.68s linear infinite;
+  height: 59%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(81) {
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -3.726s linear infinite;
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -3.726s linear infinite;
+  height: 76%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(82) {
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -3.772s linear infinite;
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -3.772s linear infinite;
+  height: 62%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(83) {
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -3.818s linear infinite;
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -3.818s linear infinite;
+  height: 53%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(84) {
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -3.864s linear infinite;
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -3.864s linear infinite;
+  height: 51%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(85) {
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -3.91s linear infinite;
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -3.91s linear infinite;
+  height: 81%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(86) {
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -3.956s linear infinite;
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -3.956s linear infinite;
+  height: 58%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(87) {
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -4.002s linear infinite;
+  animation: audiowave 0.85s -0.7s infinite,
+    audiowaveMove 4s -4.002s linear infinite;
+  height: 74%;
+}
+
+.soundWaveWrap.animationActive .soundWave span:nth-child(88) {
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -4.048s linear infinite;
+  animation: audiowave 0.85s -0.9s infinite,
+    audiowaveMove 4s -4.048s linear infinite;
+  height: 71%;
+}
+.engine {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 2560px;
+  height: 1100px;
+}
+
+.s2Svg {
+  position: absolute;
+  top: 31px;
+  left: 0%;
+  /* margin-left: -638px; */
+  width: 1360px;
+  height: 900px;
+  filter: blur(3px);
+  opacity: 1;
+}
+.s2Svg .curveLine {
+  stroke-dasharray: 750;
+  stroke-dashoffset: 750;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform: translate3d(0px, 0px, 0px);
+  fill: none;
+}
+
+.s2Svg .curveLine.line1 {
+  stroke: #00c4ff;
+  stroke-width: 3px;
+}
+.s2Svg .curveLine.line2 {
+  stroke: #c795f6;
+  stroke-width: 4px;
+}
+.s2Svg .curveLine.line3 {
+  stroke: #30d3fe;
+  stroke-width: 5px;
+}
+.s2Svg .curveLine.line4 {
+  stroke: #ff2d43;
+  stroke-width: 6px;
+}
+.s2Svg .curveLine.line5 {
+  stroke: #9ecaff;
+  stroke-width: 5px;
+}
+.s2Svg .curveLine.line6 {
+  stroke: #ff1f36;
+  stroke-width: 3px;
+}
+.s2Svg .curveLine.line7 {
+  stroke: #48e9ff;
+  stroke-width: 6px;
+}
+.s2Svg .curveLine.line8 {
+  stroke: #ff1a14;
+  stroke-width: 3px;
+}
+.s2Svg .curveLine.line9 {
+  stroke: #ff1500;
+  stroke-width: 4px;
+}
+.s2Svg .curveLine.line10 {
+  stroke: #ff00ab;
+  stroke-width: 5px;
+}
+.s2Svg .curveLine.line11 {
+  stroke: #ff0f32;
+  stroke-width: 6px;
+}
+.s2Svg .curveLine.line12 {
+  stroke: #20a6ff;
+  stroke-width: 3px;
+}
+.s2Svg .curveLine.line13 {
+  stroke: #ff4f65;
+  stroke-width: 4px;
+}
+.s2Svg .curveLine.line14 {
+  stroke: #ff4a3d;
+  stroke-width: 5px;
+}
+.s2Svg .curveLine.line15 {
+  stroke: #ffc6c1;
+  stroke-width: 6px;
+}
+.s2Svg .curveLine.line16 {
+  stroke: #23f9f9;
+  stroke-width: 4px;
+}
+
+.s2Svg .curveLine.line1 {
+  animation: s3CurveLine1 300ms 200ms linear forwards infinite;
+}
+.s2Svg .curveLine.line2 {
+  animation: s3CurveLine1 300ms 800ms linear forwards infinite;
+}
+.s2Svg .curveLine.line3 {
+  animation: s3CurveLine1 300ms 600ms linear forwards infinite;
+}
+.s2Svg .curveLine.line4 {
+  animation: s3CurveLine1 300ms 200ms linear forwards infinite;
+}
+.s2Svg .curveLine.line5 {
+  animation: s3CurveLine1 300ms 400ms linear forwards infinite;
+}
+.s2Svg .curveLine.line6 {
+  animation: s3CurveLine1 300ms 100ms linear forwards infinite;
+}
+.s2Svg .curveLine.line7 {
+  animation: s3CurveLine1 300ms 370ms linear forwards infinite;
+}
+.s2Svg .curveLine.line8 {
+  animation: s3CurveLine1 300ms 920ms linear forwards infinite;
+}
+.s2Svg .curveLine.line9 {
+  animation: s3CurveLine1 300ms 300ms linear forwards infinite;
+}
+.s2Svg .curveLine.line10 {
+  animation: s3CurveLine1 300ms 760ms linear forwards infinite;
+}
+.s2Svg .curveLine.line11 {
+  animation: s3CurveLine1 300ms 430ms linear forwards infinite;
+}
+.s2Svg .curveLine.line12 {
+  animation: s3CurveLine1 300ms 330ms linear forwards infinite;
+}
+.s2Svg .curveLine.line13 {
+  animation: s3CurveLine1 300ms 570ms linear forwards infinite;
+}
+.s2Svg .curveLine.line14 {
+  animation: s3CurveLine1 300ms 610ms linear forwards infinite;
+}
+.s2Svg .curveLine.line15 {
+  animation: s3CurveLine1 300ms 400ms linear forwards infinite;
+}
+.s2Svg .curveLine.line16 {
+  animation: s3CurveLine1 300ms 650ms linear forwards infinite;
+}
+
+@keyframes s3CurveLine1 {
+  0% {
+    stroke-dashoffset: 750;
+  }
+  100% {
+    stroke-dashoffset: -750;
+  }
+}
